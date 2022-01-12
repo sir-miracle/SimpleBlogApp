@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DC9EE6"
+    android:padding="10dp"
+    tools:context=".ui.fragments.PostCommentsFragment">
+
+
+    <TextView
+        android:id="@+id/post"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="The post"
+        android:textColor="#201E1E"
+        android:textSize="15sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="comments for this post:"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/post" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comments_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@id/comments"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@+id/enter_comment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comments" />
+
+
+    <EditText
+        android:id="@+id/enter_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="100dp"
+        android:hint="type your comment here"
+        android:textColor="@color/black"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/send_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:backgroundTint="#454343"
+        android:padding="10dp"
+        android:text="send"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintLeft_toRightOf="@id/enter_comment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

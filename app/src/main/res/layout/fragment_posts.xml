@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="3"
+    tools:context=".ui.fragments.PostsFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/posts_recycler_view"
+        android:clipToPadding="false"
+        android:paddingBottom="50dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginBottom="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/add_post"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:backgroundTint="#AFA0A0"
+            android:layout_marginHorizontal="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="add your own post"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
