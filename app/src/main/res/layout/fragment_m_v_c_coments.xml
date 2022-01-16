@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="#DC9EE6"
+    android:background="#4C6387"
     android:padding="10dp"
     tools:context=".implementation1.ui.fragments.PostCommentsFragment">
 
 
     <TextView
-        android:id="@+id/post"
+        android:id="@+id/mvc_post"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -24,7 +24,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/comments"
+        android:id="@+id/mvc_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -33,24 +33,24 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/post" />
+        app:layout_constraintTop_toBottomOf="@id/mvc_post" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/comments_recyclerview"
+        android:id="@+id/mvc_comments_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@id/comments"
+        android:layout_below="@id/mvc_comments"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
         android:clipToPadding="false"
-        app:layout_constraintBottom_toTopOf="@+id/enter_comment"
+        app:layout_constraintBottom_toTopOf="@+id/mvc_enter_comment"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/comments" />
+        app:layout_constraintTop_toBottomOf="@id/mvc_comments" />
 
 
     <EditText
-        android:id="@+id/enter_comment"
+        android:id="@+id/mvc_enter_comment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rectangle"
@@ -64,7 +64,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/send_comment"
+        android:id="@+id/mvc_send_comment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="2"
@@ -72,10 +72,9 @@
         android:padding="10dp"
         android:text="send"
         android:layout_marginBottom="20dp"
-        app:layout_constraintLeft_toRightOf="@id/enter_comment"
+        app:layout_constraintLeft_toRightOf="@id/mvc_enter_comment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

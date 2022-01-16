@@ -7,21 +7,9 @@
     android:layout_weight="3"
     tools:context=".implementation1.ui.fragments.PostsFragment">
 
-    <SearchView
-        android:id="@+id/search"
-        android:background="@drawable/rectangle"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="5dp"
-        android:queryHint="Search"
-        android:queryBackground="@android:color/transparent"
-        android:iconifiedByDefault="false"
-        android:layout_marginHorizontal="3dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/posts_recycler_view"
+        android:id="@+id/mvc_posts_recycler_view"
         android:clipToPadding="false"
         android:paddingBottom="50dp"
         android:layout_marginBottom="10dp"
@@ -37,29 +25,18 @@
         android:layout_height="wrap_content">
 
         <Button
-            android:id="@+id/add_post"
+            android:id="@+id/mvc_add_post"
             android:layout_weight="1"
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
-            android:textColor="@color/black"
-            android:backgroundTint="#AFA0A0"
+            android:layout_marginHorizontal="50dp"
+            android:textColor="@color/white"
+            android:backgroundTint="#3AE146"
             android:layout_marginRight="15dp"
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="add your own post"/>
-
-        <Button
-            android:id="@+id/implementation2"
-            android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:backgroundTint="#AFA0A0"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="250dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="MVC"/>
-
 
     </LinearLayout>
 

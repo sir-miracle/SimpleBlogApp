@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#157AF6"
+    android:background="#F44336"
     android:paddingVertical="2dp"
     android:paddingHorizontal="5dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -24,7 +24,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/rv_posts_title_textview"
+                android:id="@+id/mvc_rv_posts_title_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
@@ -35,7 +35,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/rv_posts_textview"
+                android:id="@+id/mvc_rv_posts_textview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"

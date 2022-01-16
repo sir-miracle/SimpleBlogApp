@@ -4,11 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.23233695652173914" />
+        <entry key="app/src/main/res/layout/activity_mvchome.xml" value="0.2375" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.23233695652173914" />
+        <entry key="app/src/main/res/layout/activity_welcome.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/comments_layout.xml" value="0.23233695652173914" />
+        <entry key="app/src/main/res/layout/fragment_m_v_c_coments.xml" value="0.21614583333333334" />
+        <entry key="app/src/main/res/layout/fragment_m_v_c_posts.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/fragment_post_comments.xml" value="0.28020833333333334" />
         <entry key="app/src/main/res/layout/fragment_post_dialog.xml" value="0.23233695652173914" />
         <entry key="app/src/main/res/layout/fragment_posts.xml" value="0.23233695652173914" />
+        <entry key="app/src/main/res/layout/mvc_comments_layout.xml" value="0.23020833333333332" />
+        <entry key="app/src/main/res/layout/mvc_posts_layout.xml" value="0.23020833333333332" />
         <entry key="app/src/main/res/layout/post_layout.xml" value="0.23233695652173914" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.23020833333333332" />
       </map>
