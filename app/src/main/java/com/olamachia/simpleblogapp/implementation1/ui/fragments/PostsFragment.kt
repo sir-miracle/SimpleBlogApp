@@ -47,13 +47,13 @@ class PostsFragment : Fragment(R.layout.fragment_posts) {
 
         viewModel.posts.observe(viewLifecycleOwner, Observer {response ->
 
+            Log.d("refresh", "${response.body()}")//to test if the swipe-refresh gets to call this observation
             if (response.isSuccessful){
 
                 blogsAdapter = PostsAdapter()
 
                 blogsAdapter.differ.submitList(response.body())
                 filteredList.addAll(blogsAdapter.differ.currentList)
-
 
                 binding.postsRecyclerView.adapter = blogsAdapter
                 binding.postsRecyclerView.layoutManager = LinearLayoutManager(activity)
@@ -75,6 +75,13 @@ class PostsFragment : Fragment(R.layout.fragment_posts) {
                 Toast.makeText(requireActivity(), "Error occurred", Toast.LENGTH_SHORT).show()
             }
         })
+
+        //set up the recyclerview refresh feature
+        binding.swipeRefresh.setOnRefreshListener {
+            binding.swipeRefresh.isRefreshing = true
+            viewModel.getPosts()
+            binding.swipeRefresh.isRefreshing = false
+        }
 
 
                 binding.addPost.setOnClickListener {
@@ -99,12 +106,13 @@ class PostsFragment : Fragment(R.layout.fragment_posts) {
                     filteredList.clear()
                     val searcher  = newText.toLowerCase(Locale.getDefault())
                     blogsAdapter.differ.currentList.forEach {
-                        Toast.makeText(requireActivity(), "$it", Toast.LENGTH_SHORT).show()
+                       // Toast.makeText(requireActivity(), "$it", Toast.LENGTH_SHORT).show()
 
                         if (it.body.toLowerCase(Locale.getDefault()).contains(searcher)){
                                 filteredList.add(it)
 
-                            blogsAdapter.differ.currentList == filteredList
+                            blogsAdapter.differ.submitList(filteredList)
+
 
                             Log.d("test", "$filteredList")
                         }

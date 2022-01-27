@@ -27,7 +27,7 @@ class PostsAdapter(): RecyclerView.Adapter<PostsAdapter.PostsViewHolder>() {
 
     }
         //difutil is more intelligent than normal arraylist, thus it is used
-    private  val differCallback = object: DiffUtil.ItemCallback<ModelsItem>(){
+    private  var differCallback = object: DiffUtil.ItemCallback<ModelsItem>(){
         override fun areItemsTheSame(oldItem: ModelsItem, newItem: ModelsItem): Boolean {
            return oldItem.body == newItem.body
         }
@@ -38,7 +38,7 @@ class PostsAdapter(): RecyclerView.Adapter<PostsAdapter.PostsViewHolder>() {
 
     }
 
-    val differ = AsyncListDiffer(this, differCallback)
+    var differ = AsyncListDiffer(this, differCallback)
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostsViewHolder {
@@ -48,7 +48,7 @@ class PostsAdapter(): RecyclerView.Adapter<PostsAdapter.PostsViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: PostsViewHolder, position: Int) {
-        val posts = differ.currentList[position]
+        var posts = differ.currentList[position]
 
 
         holder.itemView.apply {
