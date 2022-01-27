@@ -80,7 +80,7 @@ class PostsFragment : Fragment(R.layout.fragment_posts) {
         binding.swipeRefresh.setOnRefreshListener {
             binding.swipeRefresh.isRefreshing = true
             viewModel.getPosts()
-            binding.swipeRefresh.isRefreshing = false
+            binding.swipeRefresh.isRefreshing = false//stop refreshing
         }
 
 
